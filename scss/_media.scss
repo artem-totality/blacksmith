@@ -1,0 +1,283 @@
+@media (max-width: 1199px) {
+	.header {
+		&__inner {
+			display: block;
+		}
+	}
+	.menu {
+		padding: 0;
+		&__item {
+			padding-bottom: $gap;
+		}
+	}
+	.motto {
+		&__title {
+			margin-bottom: -32px;
+			font-size: 136px;
+		}
+	}
+	.card {
+		padding: 30px 36px;
+	}
+	.typing-area {
+		min-height: 470px;
+		padding: 42px 36px;
+		font-size: 66px;
+	}
+	.partners-contacts {
+		&__info {
+			&-left {
+				min-width: 400px;
+			}
+			&-offer {
+				font-size: 52px;
+			}
+		}
+	}
+	.main {
+		&__inner {
+			padding: 35px 0;
+		}
+	}
+	.chess {
+		grid-template-columns: 1fr 40%;
+		grid-template-rows: auto auto auto auto 1fr;
+		&__img1 {
+			grid-row: 2 / 3;
+		}
+		&__img5 {
+			grid-column: 2 / 3;
+			grid-row: 3 / 5;
+		}
+		&__info1 {
+			grid-column: 2 / 3;
+			grid-row: 5 / 6;
+		}
+		&__info2 {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+		&__img4 {
+			grid-column: 1 / 2;
+			grid-row: 4 / 6;
+		}
+		&__img3 {
+			grid-column: 1 / 3;
+			grid-row: 6 / 7;
+		}
+		&__info3 {
+			grid-column: 1 / 3;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	.motto {
+		&__title {
+			margin-bottom: -26px;
+			font-size: 90px;
+		}
+	}
+	.card {
+		padding: 6px 16px;
+	}
+	.typing-area {
+		min-height: 420px;
+		padding: 36px 30px;
+		font-size: 50px;
+	}
+	.role {
+		padding: 12px 0;
+		&__img img {
+			width: 42px;
+			height: 42px;
+			margin-right: 6px;
+		}
+		&__title {
+			font-size: 24px;
+		}
+	}
+	.partners-contacts {
+		&__inner {
+			padding-bottom: 80px;
+		}
+		&__info {
+			&-left {
+				min-width: 200px;
+				font-size: 25px;
+			}
+			&-right {
+				margin-left: $gap;
+			}
+			&-offer {
+				font-size: 46px;
+			}
+		}
+	}
+	.footer {
+		&__inner {
+			padding: 100px 0 80px;
+			gap: $gap;
+			div {
+				width: calc(50% - 12px);
+			}
+		}
+	}
+	.contacts {
+		&__main {
+			flex-direction: column;
+		}
+		&__links,
+		&__form {
+			width: 100%;
+		}
+		&__form-inner {
+			padding: $gap 0;
+		}
+	}
+	.main {
+		&__inner {
+			flex-direction: column-reverse;
+		}
+	}
+	.promo {
+		&__item {
+			&-top {
+				min-height: 85px;
+			}
+			svg {
+				flex-basis: 42px;
+				height: 42px;
+			}
+		}
+	}
+	.clients-product {
+		width: calc(50% - 12px);
+	}
+	.dev {
+		&__inner {
+			display: flex;
+			flex-direction: column;
+		}
+		&__profile {
+			align-self: center;
+		}
+		&__controls {
+			padding: $half-gap;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.logo {
+		padding-bottom: 12px;
+		svg {
+			width: 48px;
+			height: 48px;
+			margin-left: -5px;
+			vertical-align: -36%;
+		}
+		&__title {
+			font-size: 42px;
+		}
+	}
+	.menu {
+		padding-bottom: 12px;
+		&__list {
+			display: block;
+		}
+		&__item {
+			padding: 12px 0;
+		}
+		&__item + .menu__item {
+			margin-left: 0;
+		}
+	}
+	.motto {
+		&__title {
+			margin-bottom: -16px;
+			font-size: 52px;
+		}
+	}
+	.card {
+		padding: 0;
+	}
+	.typing-area {
+		min-height: 270px;
+		padding: 24px 16px;
+		font-size: 32px;
+	}
+	.roles {
+		&__content {
+			flex-direction: column;
+			align-items: stretch;
+			.card {
+				width: 100%;
+			}
+		}
+	}
+	.role {
+		padding: 12px;
+	}
+	.partners-contacts {
+		&__info {
+			flex-direction: column;
+			&-left {
+				margin-bottom: $gap;
+				font-size: 24px;
+			}
+			&-right {
+				margin-left: 0;
+			}
+			&-offer {
+				font-size: 42px;
+			}
+		}
+	}
+	.footer {
+		&__inner {
+			padding: 80px 0 60px;
+			flex-direction: column;
+			div {
+				width: 100%;
+			}
+		}
+	}
+	.contacts {
+		&__links,
+		&__form {
+			&-inner {
+				padding: 30px 16px;
+			}
+		}
+		&__links-inner {
+			font-size: 25px;
+		}
+	}
+	.link {
+		svg {
+			width: 23px;
+			height: 23px;
+			margin-right: 5px;
+		}
+	}
+	.promo {
+		&__item {
+			width: 100%;
+		}
+	}
+	.chess {
+		display: flex;
+		flex-direction: column;
+		gap: $gap;
+	}
+	.clients-products {
+		&__items {
+			display: block;
+		}
+	}
+	.clients-product {
+		width: 100%;
+		margin-bottom: $gap;
+	}
+}

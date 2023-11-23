@@ -1,0 +1,177 @@
+@import 'variables';
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+img {
+	display: block;
+}
+
+input,
+select,
+option,
+textarea,
+button {
+	font-family: Roboto;
+}
+
+@mixin selection {
+	&::selection {
+		color: $black;
+		background-color: $main-color;
+	}
+}
+
+body {
+	font-family: $main-font;
+	font-size: 20px;
+	font-weight: 300;
+	color: $main-color;
+	background-color: $black;
+	* {
+		@include selection;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/space.jpg');
+		background-position: center center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		filter: grayscale(100%) brightness(45%);
+		z-index: -1;
+	}
+}
+
+@mixin title-font {
+	font-family: $headers-font;
+	font-weight: 700;
+}
+
+@mixin section-title {
+	padding: 120px 0 56px;
+	font-size: 64px;
+	@include title-font;
+	@media (max-width: 1199px) {
+		padding: 80px 0 48px;
+		font-size: 60px;
+	}
+}
+
+@mixin section-liquid-title {
+	padding: 170px 0 56px;
+	font-size: 64px;
+	@include title-font;
+	@media (max-width: 1199px) {
+		padding: 80px 0 48px;
+		font-size: 60px;
+	}
+	@media (max-width: 600px) {
+		font-size: 40px;
+	}
+}
+
+@mixin section-subtitle {
+	font-size: 36px;
+	@include title-font;
+	@media (max-width: 1199px) {
+		font-size: 30px;
+	}
+	@media (max-width: 900px) {
+		font-size: 24px;
+	}
+}
+
+@mixin element-decor {
+	backdrop-filter: blur(6px);
+	background: $background-color;
+	border: 2px solid $shady-main-color;
+	border-radius: 8px;
+}
+
+@mixin transition {
+	transition: 300ms all ease-in-out;
+}
+
+@mixin focus-color-hover {
+	&:hover {
+		color: $focus-color;
+	}
+}
+
+@mixin text-overflow {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin section-info {
+	margin-bottom: $big-gap;
+	font-size: 29px;
+	line-height: 37px;
+}
+
+@mixin button {
+	display: block;
+	width: 100%;
+	max-width: 570px;
+	padding: 26px;
+	color: inherit;
+	font-size: 24px;
+	font-weight: 700;
+	cursor: pointer;
+	@include element-decor;
+	@include transition;
+	&:hover {
+		border-color: $main-color;
+	}
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.svg-sprite {
+	display: none;
+}
