@@ -88,24 +88,26 @@ body {
 }
 
 @mixin section-title {
-	padding: 120px 0 56px;
+	padding: 55px 0;
 	font-size: 64px;
 	@include title-font;
 	@media (max-width: 1199px) {
-		padding: 80px 0 48px;
+		padding: 48px 0;
 		font-size: 60px;
 	}
 }
 
 @mixin section-liquid-title {
-	padding: 170px 0 56px;
+	text-align: center;
+	padding: 55px 0;
 	font-size: 64px;
 	@include title-font;
 	@media (max-width: 1199px) {
-		padding: 80px 0 48px;
+		padding: 48px 0;
 		font-size: 60px;
 	}
 	@media (max-width: 600px) {
+		padding-top: 24px;
 		font-size: 40px;
 	}
 }
