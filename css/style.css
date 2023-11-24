@@ -2243,6 +2243,14 @@ body::before {
     margin-right: 0;
     vertical-align: -30%;
   }
+  .contacts__link--mail {
+    font-size: 19px;
+  }
+  .contacts__link--mail svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: -32%;
+  }
 
   .motto__title {
     margin-bottom: -16px;
