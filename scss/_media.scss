@@ -123,6 +123,13 @@
 		}
 	}
 	.contacts {
+		&__link {
+			display: block;
+		}
+		&__box-inner {
+			padding-top: 24px;
+			font-size: 0;
+		}
 		&__main {
 			flex-direction: column;
 		}
@@ -168,6 +175,23 @@
 }
 
 @media (max-width: 600px) {
+	.footer {
+		&__inner {
+			padding: 60px 0;
+		}
+	}
+	.contacts {
+		&__box-inner {
+			padding: 24px 12px 0;
+		}
+		&__link {
+			font-size: 20px;
+			svg {
+				margin-right: 0;
+				vertical-align: -30%;
+			}
+		}
+	}
 	.motto {
 		&__title {
 			margin-bottom: -16px;
