@@ -90,6 +90,71 @@
 	@include element-decor;
 }
 
+.resume {
+	&__inner {
+		padding: 35px 0;
+	}
+	&__title {
+		@include section-liquid-title;
+		text-align: left;
+	}
+}
+
+.body {
+	&__profile {
+		display: flex;
+		// flex-direction: row-reverse;
+		// justify-content: space-between;
+		align-items: center;
+		padding: 24px 0;
+		margin-bottom: 36px;
+		gap: 0 64px;
+	}
+	&__img {
+		width: 275px;
+		border-radius: 50%;
+	}
+	&__name {
+		// margin-right: 24px;
+		@include section-liquid-title;
+		padding: 0;
+		text-align: left;
+		span {
+			display: block;
+			color: $shady-main-color;
+			@include section-subtitle;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 36px;
+		@include section-subtitle;
+	}
+	&__info {
+		text-align: justify;
+		color: $shady-main-color;
+		@include section-info;
+		b {
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+		ul {
+			padding: 12px 0 24px;
+			margin-left: 24px;
+			li::before {
+				content: '\2014';
+				margin-right: 10px;
+				vertical-align: -5%;
+			}
+		}
+		a {
+			color: $main-color;
+			text-decoration: underline;
+		}
+	}
+}
+
 .footer {
 	border-top: 2px solid $shady-main-color;
 	&__inner {
@@ -114,148 +179,6 @@
 	}
 }
 //--- index page end ---//
-
-// .motto {
-// 	&__inner {
-// 		padding: 35px 0;
-// 	}
-// 	&__title {
-// 		margin-bottom: -48px;
-// 		font-size: 180px;
-// 		@include title-font;
-// 	}
-// }
-
-// .typing-area {
-// 	min-height: 620px;
-// 	padding: 56px 48px;
-// 	font-size: 88px;
-// 	@include title-font;
-// }
-
-// .roles {
-// 	&__inner {
-// 		padding: 35px 0;
-// 	}
-// 	&__title {
-// 		@include section-title;
-// 	}
-// 	&__content {
-// 		display: flex;
-// 		flex-wrap: wrap;
-// 		gap: $gap;
-// 		.card {
-// 			width: calc(50% - 12px);
-// 			height: auto;
-// 			min-height: 360px;
-// 		}
-// 	}
-// }
-
-// .role {
-// 	&__top {
-// 		display: flex;
-// 		margin-bottom: 18px;
-// 		align-items: center;
-// 	}
-// 	&__img img {
-// 		width: 64px;
-// 		height: 64px;
-// 		margin-right: 16px;
-// 		border-radius: 50%;
-// 		overflow: hidden;
-// 	}
-// 	&__title {
-// 		@include section-subtitle;
-// 	}
-// 	&__info {
-// 		line-height: 30px;
-// 	}
-// }
-
-// .partners-contacts {
-// 	&__inner {
-// 		padding: 35px 0 120px;
-// 	}
-// 	&__title {
-// 		@include section-title;
-// 	}
-// 	&__info {
-// 		display: flex;
-// 		&-left {
-// 			min-width: 420px;
-// 			@include section-info;
-// 		}
-// 		&-right {
-// 			display: flex;
-// 			flex-direction: column;
-// 			margin-left: 40px;
-// 		}
-// 		&-offer {
-// 			margin-bottom: 28px;
-// 			font-size: 56px;
-// 			line-height: 60px;
-// 			@include title-font;
-// 			color: $shady-main-color;
-// 			span {
-// 				color: $main-color;
-// 			}
-// 		}
-// 	}
-// 	&__form {
-// 		textarea,
-// 		input {
-// 			display: block;
-// 			position: relative;
-// 			width: 100%;
-// 			max-width: 570px;
-// 			margin-bottom: $gap;
-// 			padding: 32px 22px 14px;
-// 			line-height: 21px;
-// 			font-weight: inherit;
-// 			color: inherit;
-// 			@include element-decor;
-// 			&::placeholder {
-// 				/* Chrome, Firefox, Opera, Safari 10.1+ */
-// 				color: $shady-main-color;
-// 				opacity: 1; /* Firefox */
-// 			}
-// 		}
-// 		a {
-// 			margin-bottom: $gap;
-// 			border-bottom: 1px solid $shady-main-color;
-// 			color: $shady-main-color;
-// 		}
-// 		button {
-// 			@include button;
-// 		}
-// 	}
-// }
-
-// .footer {
-// 	border-top: 2px solid $shady-main-color;
-// 	&__inner {
-// 		display: flex;
-// 		padding: 80px 0;
-// 		flex-wrap: wrap;
-// 		gap: 0 5px;
-// 		align-items: center;
-// 		justify-content: center;
-// 		line-height: 36px;
-// 		text-align: center;
-// 	}
-// 	&__link {
-// 		span {
-// 			border-bottom: 1px solid $main-color;
-// 		}
-// 		svg {
-// 			width: 32px;
-// 			height: 32px;
-// 			vertical-align: -30%;
-// 		}
-// 	}
-// }
-// //--- partners page end ---//
 
 //--- main page start ---//
 .main {
@@ -580,8 +503,6 @@
 	&__info {
 		max-width: 480px;
 		@include section-info;
-	}
-	&__box-inner {
 	}
 	&__link {
 		margin-bottom: $gap;

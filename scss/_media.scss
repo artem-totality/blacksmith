@@ -141,6 +141,17 @@
 			padding: $gap 0;
 		}
 	}
+	.body {
+		&__profile {
+			display: block;
+		}
+		&__name {
+			text-align: center;
+		}
+		&__img {
+			margin: 0 auto;
+		}
+	}
 	.main {
 		&__inner {
 			flex-direction: column-reverse;
@@ -175,6 +186,11 @@
 }
 
 @media (max-width: 600px) {
+	.body {
+		&__inner {
+			padding: 0 12px;
+		}
+	}
 	.footer {
 		&__inner {
 			padding: 60px 0;
